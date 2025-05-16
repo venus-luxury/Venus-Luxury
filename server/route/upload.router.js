@@ -5,11 +5,6 @@ import upload from '../middleware/multer.js'
 
 const uploadRouter = Router()
 
-uploadRouter.post(
-    "/upload",
-    auth,
-    upload.array("images", 10),     // ← allow up to 10 files, field name = "images"
-    uploadImageController
-  );
-  
+uploadRouter.post("/upload",auth,upload.single("image"),uploadImageController)
+
 export default uploadRouter

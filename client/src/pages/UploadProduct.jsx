@@ -197,7 +197,6 @@ const UploadProduct = () => {
                           </div>
                           <input 
                             type='file'
-                            multiple
                             id='productImage'
                             className='hidden'
                             accept='image/*'
