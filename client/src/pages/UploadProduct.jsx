@@ -48,26 +48,34 @@ const UploadProduct = () => {
     })
   }
 
-  const handleUploadImage = async(e)=>{
-    const file = e.target.files[0]
-
-    if(!file){
-      return 
-    }
-    setImageLoading(true)
-    const response = await uploadImage(file)
-    const { data : ImageResponse } = response
-    const imageUrl = ImageResponse.data.url 
-
-    setData((preve)=>{
-      return{
-        ...preve,
-        image : [...preve.image,imageUrl]
+  const handleUploadImage = async (e) => {
+    const files = Array.from(e.target.files);
+  
+    if (files.length === 0) return;
+  
+    setImageLoading(true);
+  
+    const uploadedImages = [];
+  
+    for (const file of files) {
+      try {
+        const response = await uploadImage(file);
+        const { data: ImageResponse } = response;
+        const imageUrl = ImageResponse.data.url;
+        uploadedImages.push(imageUrl);
+      } catch (error) {
+        console.error("Image upload failed", error);
       }
-    })
-    setImageLoading(false)
-
-  }
+    }
+  
+    setData((prev) => ({
+      ...prev,
+      image: [...prev.image, ...uploadedImages],
+    }));
+  
+    setImageLoading(false);
+  };
+  
 
   const handleDeleteImage = async(index)=>{
       data.image.splice(index,1)
@@ -200,6 +208,7 @@ const UploadProduct = () => {
                             id='productImage'
                             className='hidden'
                             accept='image/*'
+                            multiple
                             onChange={handleUploadImage}
                           />
                       </label>
