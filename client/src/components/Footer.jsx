@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -19,6 +20,9 @@ const Footer = () => {
                 <a href='' className='hover:text-primary-100'>
                     <FaLinkedin/>
                 </a>
+                <a href='https://wa.me/+919426653603' target='_blank' rel='noopener noreferrer' className='hover:text-primary-100'>
+        <FaWhatsapp />
+    </a>
             </div>
         </div>
     </footer>
