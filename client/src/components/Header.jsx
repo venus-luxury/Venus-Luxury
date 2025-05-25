@@ -73,10 +73,10 @@ const Header = () => {
                                         />
                                         <img 
                                             src={logo}
-                                            width={120}
+                                            width={75}
                                             height={60}
                                             alt='logo'
-                                            className='lg:hidden'
+                                            className='block lg:hidden h-10' // smaller height for mobile
                                         />
                                     </Link>
                                 </div>
