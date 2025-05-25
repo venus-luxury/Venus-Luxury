@@ -11,6 +11,7 @@ import image2 from '../assets/Best_Prices_Offers.png'
 import image3 from '../assets/Wide_Assortment.png'
 import { pricewithDiscount } from '../utils/PriceWithDiscount'
 import AddToCartButton from '../components/AddToCartButton'
+import ShareOnWhatsAppButton from '../components/AddToCartButton'
 
 const ProductDisplayPage = () => {
   const params = useParams()
@@ -126,7 +127,7 @@ const ProductDisplayPage = () => {
 
 
         <div className='p-4 lg:pl-7 text-base lg:text-lg'>
-            <p className='bg-green-300 w-fit px-2 rounded-full'>10 Min</p>
+            <p className='bg-green-300 w-fit px-2 rounded-full'>Premium</p>
             <h2 className='text-lg font-semibold lg:text-3xl'>{data.name}</h2>  
             <p className=''>{data.unit}</p> 
             <Divider/>
@@ -158,13 +159,13 @@ const ProductDisplayPage = () => {
                 : (
                   // <button className='my-4 px-4 py-1 bg-green-600 hover:bg-green-700 text-white rounded'>Add</button>
                   <div className='my-4'>
-                    <AddToCartButton data={data}/>
+                    <ShareOnWhatsAppButton data={data}/>
                   </div>
                 )
               }
            
 
-            <h2 className='font-semibold'>Why shop from binkeyit? </h2>
+            <h2 className='font-semibold'>Why shop from "Venus Luxury"? </h2>
             <div>
                   <div className='flex  items-center gap-4 my-4'>
                       <img
@@ -173,8 +174,8 @@ const ProductDisplayPage = () => {
                         className='w-20 h-20'
                       />
                       <div className='text-sm'>
-                        <div className='font-semibold'>Superfast Delivery</div>
-                        <p>Get your orer delivered to your doorstep at the earliest from dark stores near you.</p>
+                        <div className='font-semibold'>Easy Cash on Delivery</div>
+                        <p>Shop worry-free with our easy Cash on Delivery option — pay only when your watch arrives at your doorstep.</p>
                       </div>
                   </div>
                   <div className='flex  items-center gap-4 my-4'>
@@ -185,7 +186,7 @@ const ProductDisplayPage = () => {
                       />
                       <div className='text-sm'>
                         <div className='font-semibold'>Best Prices & Offers</div>
-                        <p>Best price destination with offers directly from the nanufacturers.</p>
+                        <p>Enjoy exceptional value with carefully crafted pricing and exclusive deals — available only from our official online store "Venus Luxury".</p>
                       </div>
                   </div>
                   <div className='flex  items-center gap-4 my-4'>
@@ -196,7 +197,7 @@ const ProductDisplayPage = () => {
                       />
                       <div className='text-sm'>
                         <div className='font-semibold'>Wide Assortment</div>
-                        <p>Choose from 5000+ products across food personal care, household & other categories.</p>
+                        <p>Explore a curated collection of 5000+ timepieces — from luxury to casual, smartwatches to vintage classics.</p>
                       </div>
                   </div>
             </div>

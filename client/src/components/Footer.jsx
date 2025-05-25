@@ -20,7 +20,7 @@ const Footer = () => {
                 <a href='' className='hover:text-primary-100'>
                     <FaLinkedin/>
                 </a>
-                <a href='https://wa.me/+919426653603' target='_blank' rel='noopener noreferrer' className='hover:text-primary-100'>
+                <a href='https://wa.me/+918780920221' target='_blank' rel='noopener noreferrer' className='hover:text-primary-100'>
         <FaWhatsapp />
     </a>
             </div>
